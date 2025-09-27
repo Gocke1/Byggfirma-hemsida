@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Definiera egna färger i Tailwind v4 via @theme */
+@theme {
+  --color-site: #E7BEA5;     /* ≈ NCS S 1510-Y40R */
+  --color-primary: #1B4F72;  /* bygg-blå */
+  --color-accent: #2ECC71;   /* grön (klart i tid/kvalitet) */
+  --color-neutralDark: #0F172A;
+  --color-neutralText: #1F2937;
+  --color-neutralBg: #F8FAFC;
+  --color-neutralLine: #E5E7EB;
+  --color-cta: #2563EB;      /* CTA-kontrast */
+}
