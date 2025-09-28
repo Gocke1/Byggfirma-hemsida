@@ -2,12 +2,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const gallery = [
-  
-  "/hero1.jpg",
-  "/hero2.jpg",
-  "/hero3.jpg",
-];
+import hero1 from "../assets/hero1.jpg";
+import hero2 from "../assets/hero2.jpg";
+import hero3 from "../assets/hero3.jpg";
+
+const gallery = [hero1, hero2, hero3];
 
 export default function HeroSection({ onCta }) {
   const [visible, setVisible] = useState(false);
