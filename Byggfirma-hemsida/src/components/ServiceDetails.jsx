@@ -1,6 +1,14 @@
 // src/components/ServiceDetails.jsx
 // Visar beskrivande text + bild för vald tjänst, med modern “glas”-stil.
 
+const withBase = (path) => {
+  const base = import.meta.env.BASE_URL.endsWith("/")
+    ? import.meta.env.BASE_URL.slice(0, -1)
+    : import.meta.env.BASE_URL
+
+  return `${base}/${path.replace(/^\//, "")}`
+}
+
 const texts = {
   "Gipsentreprenad":
     "Vi levererar gipsentreprenader med hög precision – väggar, tak och speciallösningar. Rena ytor, raka tidplaner och snygga avslut. Behöver du en gipsentreprenad?",
@@ -23,14 +31,14 @@ const texts = {
 const images = {
   // Försöker först ladda från /public/services/*.jpg
   // Finns inte filen? Faller tillbaka till en snygg Unsplash-bild.
-  "Gipsentreprenad": "/services/gipsentreprenad.jpg",
-  "Stambyten": "/services/stambyten.jpg",
-  "Byggservice": "/services/byggservice.jpg",
-  "Ombyggnationer": "/services/ombyggnationer.jpg",
-  "Tillbyggnationer": "/services/tillbyggnationer.jpg",
-  "Lokal anpassning": "/services/lokal-anpassning.jpg",
-  "Totalentreprenad": "/services/totalentreprenad.jpg",
-  "Projektledning": "/services/projektledning.jpg",
+  "Gipsentreprenad": withBase("services/gipsentreprenad.jpg"),
+  "Stambyten": withBase("services/stambyten.jpg"),
+  "Byggservice": withBase("services/byggservice.jpg"),
+  "Ombyggnationer": withBase("services/ombyggnationer.jpg"),
+  "Tillbyggnationer": withBase("services/tillbyggnationer.jpg"),
+  "Lokal anpassning": withBase("services/lokal-anpassning.jpg"),
+  "Totalentreprenad": withBase("services/totalentreprenad.jpg"),
+  "Projektledning": withBase("services/projektledning.jpg"),
 };
 
 const fallbacks = {
